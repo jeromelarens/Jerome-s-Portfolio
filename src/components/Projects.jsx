@@ -12,21 +12,26 @@ import { HiSparkles } from "react-icons/hi";
 import { motion, AnimatePresence } from "framer-motion";
 import { portfolioData } from "../data/portfolioData";
 import { isExternalHttpUrl, sanitizeHref } from "../utils/security";
+import interviewAwareImage from "../public/images/Interview Aware code Inteligenge image.png";
+import mpxireImage from "../public/images/Mpxire.png";
+import selfMotiveImage from "../public/images/Self Motive Traker.png";
+import studentGrowthImage from "../public/images/Student Growth Analyser.png";
+import textForensicImage from "../public/images/Text forensic analyser.png";
 
 // Project images mapping - matches by partial title (case-insensitive)
 const getProjectImage = (title) => {
   const lowerTitle = title.toLowerCase();
   
   if (lowerTitle.includes("interview")) 
-    return "src/public/images/Interview Aware code Inteligenge image.png";
+    return interviewAwareImage;
   if (lowerTitle.includes("text forensic") || lowerTitle.includes("forensic")) 
-    return "src/public/images/Text forensic analyser.png";
+    return textForensicImage;
   if (lowerTitle.includes("mpxire")) 
-    return "src/public/images/Mpxire.png";
+    return mpxireImage;
   if (lowerTitle.includes("self motive") || lowerTitle.includes("motive")) 
-    return "src/public/images/Self Motive Traker.png";
+    return selfMotiveImage;
   if (lowerTitle.includes("student growth") || lowerTitle.includes("growth")) 
-    return "src/public/images/Student Growth Analyser.png";
+    return studentGrowthImage;
   
   return null;
 };

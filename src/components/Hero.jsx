@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import { portfolioData } from '../data/portfolioData';
+import profileImage from '../public/images/profile.jpg';
 
 /**
  * Hero Section Component
@@ -221,7 +222,7 @@ export default function Hero() {
                   <div className="absolute inset-0 bg-neutral-800 animate-pulse rounded-full" />
                 )}
                 <img
-                  src="src/public/images/profile.jpg"
+                  src={profileImage}
                   alt="JEROME LARENS - Full Stack Developer"
                   className={`w-full h-full object-cover transition-opacity duration-500 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
                   onLoad={() => setImageLoaded(true)}

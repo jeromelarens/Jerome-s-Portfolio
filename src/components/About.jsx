@@ -13,6 +13,7 @@ import {
   SiTailwindcss,
   SiTypescript,
 } from "react-icons/si";
+import resumePdf from "../public/JEROME LARENS-BE 2026  MERN STACK DEVELOPER RESUME.pdf";
 
 export default function About() {
   const techs = [
@@ -114,7 +115,7 @@ export default function About() {
               </motion.a>
 
               <motion.a
-                href="src\public\JEROME LARENS-BE 2026  MERN STACK DEVELOPER RESUME.pdf"
+                href={resumePdf}
                 download
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
